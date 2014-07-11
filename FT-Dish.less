@@ -1,0 +1,177 @@
+@salmon: #fff1e0;
+@purple: #9e2f50;
+@almost-black: #333333;
+@light-red: #CC3333;
+@sky-blue: #66CCCC;
+
+// Fonts
+@font-face {
+    font-family: Clarion; 
+    src: url("/Clarion.ttf");
+}
+
+@font-face {
+    font-family: 'Alegreya Sans'; 
+    font-weight: light;
+    src: 
+    url("/AlegreyaSans-Thin-webfont.ttf"),
+    url("/AlegreyaSans-Thin-webfont.eot"),
+    url("/AlegreyaSans-Thin-webfont.woff"),
+    url("/AlegreyaSans-Thin-webfont.svg");
+}
+
+.position-transition {
+	.transition(left, 0.2s, ease-in);
+}
+
+.transition(@property, @duration, @timing-function) {
+	-webkit-transition: @property @duration @timing-function;
+	-moz-transition: @property @duration @timing-function;
+	-o-transition: @property @duration @timing-function;
+	transition: @property @duration @timing-function;
+}
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+	background-color: @salmon;
+	margin: 0px;
+	font-family: 'Alegreya Sans';
+	font-weight: light;
+
+	color: @almost-black;
+}
+
+div#left-pane {
+	.position-transition;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0%;
+
+	&.active {
+		left: -100%;
+	}
+}
+
+div#right-pane {
+	div#back {
+		float: left;
+		width: 40px;
+	}
+	i.fa-mail-reply {
+		font-size: 20px;
+		margin-right: 10px;
+	}
+	.position-transition;
+	position: absolute;
+	height: 100%:
+	width: 100%;
+	left: 100%;
+
+	&.active {
+		left: 0%;
+	}
+}
+
+header {
+	background-color: @purple;
+	padding: 15px 0px 15px 25px;
+	font-size: 35px;
+	color: @salmon;
+
+	span.ft-font {
+		font-size: 30px;
+		margin-right: 2px;
+	}
+}
+
+footer {
+	color: black;
+
+	@height: 50px;
+	height: @height;
+	line-height: @height;
+	padding-left: 20px;
+	background-color: @sky-blue;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	div.left {
+		float: left;
+		font-size: 16px;
+	}
+
+	div.right {
+		float: right;
+
+		img {
+			height: @height;
+			width: auto;
+		}
+	}
+}
+
+.ft-font {
+	font-family: Clarion;
+}
+
+section {
+	&.active {
+		background-color: white;
+	}
+
+	@height: 85px;
+
+	@icon-height: 60px;
+	div.icon {
+		margin: 10px 25px 0 25px;
+		float: left;
+		width: @icon-height;
+		height: @icon-height;
+		border-radius: @icon-height / 2;
+
+		background-color: @almost-black;
+
+		img#appetizers {
+			height: 35px;
+			margin-left: 12px;
+		}
+
+		img#main-dish{
+			height: 25px;
+			margin-left: 5px;
+			position: relative;
+			top: -8px;
+		}
+
+		img#a-drink-with{
+			height: 50px;
+			margin-left: 22px;
+			margin-top: 3px;
+		}
+
+		img#the-scoop{
+			height: 45px;
+			margin-left: 17px;
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	font-size: 30px;
+	
+	height: @height;
+	line-height: @height;
+	// border-bottom: 1px solid gray;
+
+	.ft-font {
+		margin-left: 2px;
+	}
+}

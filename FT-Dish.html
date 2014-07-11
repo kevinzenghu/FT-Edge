@@ -1,0 +1,76 @@
+<head>
+  <title>FT Dish</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+</head>
+
+<body>
+	{{> left_pane}}
+	{{> right_pane}}
+</body>
+
+<template name="left_pane">
+	<div id="left-pane">
+		<header>
+			<span class="ft-font">FT</span> DISH
+		</header>
+
+		{{> sections}}
+		{{> sponsorship}}
+	</div>
+</template>
+
+<template name="right_pane">
+	<div id="right-pane">
+		<header>
+			<div id="back">
+				<i class="fa fa-mail-reply"></i>
+			</div>
+			<span class="ft-font">FT</span> Substance
+		</header>
+		<section>
+			Everything you need to know about Bitcoin
+			<img src="/bitcoin_graphic.png">
+		</section>
+	</div>
+</template>
+
+<template name="sponsorship">
+	<footer>
+		<div class="left">
+			Sponsored by London Business School
+		</div>
+   	    <div class="right">
+   	    	<img src="/lbs-logo.jpeg">
+   	    </div>
+   	</footer>
+</template>
+
+<template name="sections">
+	<section class="test">
+		<div class="icon">
+			<img id="appetizers" src="/appetizers.png">
+		</div>
+		Starters
+	</section>
+
+	<section>
+		<div class="icon">
+			<img id="main-dish" src="/main_dish.png">
+		</div>
+		Substance
+	</section>
+
+	<section>
+		<div class="icon">
+			<img id="a-drink-with" src="/a_drink_with.png">
+		</div>
+		A drink with <span class="ft-font">FT</span>
+	</section>
+
+	<section>
+		<div class="icon">
+			<img id="the-scoop" src="/the_scoop.png">
+		</div>
+		The scoop
+	</section>
+</template>
