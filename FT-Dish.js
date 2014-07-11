@@ -48,7 +48,13 @@ if (Meteor.isClient) {
         FastClick.attach(document.body);
         $("#splash").addClass('animate');
         setTimeout(function() {
-            $("#splash").remove();
-        }, 1000);
+            $("#splash div.ft-icon-logo").fadeIn();
+        }, 800);
+        setTimeout(function() {
+            $("#splash div.dish").fadeIn();
+        }, 1600);
+        setTimeout(function() {
+            $("#splash").fadeOut();
+        }, 2800);
     });
 }
