@@ -10,6 +10,12 @@
     src: url("/Clarion.ttf");
 }
 
+// Fonts
+@font-face {
+    font-family: ft-icons;
+    src: url("/ft-icons.ttf");
+}
+
 @font-face {
     font-family: 'Alegreya Sans'; 
     font-weight: light;
@@ -195,3 +201,18 @@ section {
 		margin-left: 2px;
 	}
 }
+
+.ft-icon-logo {
+  font-family: ft-icons;
+  display: inline;
+  position: relative;
+  top: -8px;
+  font-size: 1.4em;
+  line-height: 1em;
+  vertical-align: middle;
+
+  &:after {
+    content: "\f10d";
+  }
+}
+
