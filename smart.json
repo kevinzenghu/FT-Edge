@@ -2,6 +2,7 @@
   "packages": {
     "famono": {},
     "iron-router": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "fastclick": {}
   }
 }
