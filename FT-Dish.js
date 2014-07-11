@@ -21,6 +21,9 @@ if (Meteor.isClient) {
         'click section': function(e) {
             console.log('Right pane');
             $("body").removeClass('active-left').addClass('active-right');
+        },
+        'click #lang': function(e) {
+          $("body").toggleClass("chinese");
         }
     });
     Template.right_pane.events({
