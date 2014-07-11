@@ -19,11 +19,11 @@
 @font-face {
     font-family: 'Alegreya Sans'; 
     src: 
-    url("/AlegreyaSans-Black-webfont.ttf"),
-    url("/AlegreyaSans-Black-webfont.eot"),
-    url("/AlegreyaSans-Black-webfont.woff"),
-    url("/AlegreyaSans-Black-webfont.svg");
-    font-weight: normal;
+    url("/AlegreyaSans-Light-webfont.ttf"),
+    url("/AlegreyaSans-Light-webfont.eot"),
+    url("/AlegreyaSans-Light-webfont.woff"),
+    url("/AlegreyaSans-Light-webfont.svg");
+    font-weight: bold;
 }
 
 @font-face {
@@ -33,7 +33,6 @@
     url("/AlegreyaSans-Thin-webfont.eot"),
     url("/AlegreyaSans-Thin-webfont.woff"),
     url("/AlegreyaSans-Thin-webfont.svg");
-
     font-weight: light;
 }
 
@@ -85,21 +84,28 @@ div#left-pane {
 
 // Starter
 section.starter-blurb {
+	color: black;
 	font-size: 18px;
 	line-height: 18px;
-	padding: 5px;
+	padding: 10px;
+	padding-top: 17px;
+	height: 90px;
+	border-bottom: 1px solid @purple;
 	span.title {
-		font-weight: normal;
+		font-weight: bold;
 	}
 }
 
 // Substance
 section.title {
 	font-size: 20px;
-	height: 120px;
+	height: 100px;
 	text-align: center;
+	color: black;
+	display: block;
 
 	div.subject {
+		font-weight: bold;
 		font-size: 30px;
 		margin-top: -50px;
 	}
@@ -115,6 +121,23 @@ section.bitcoin-graphic {
 		margin: 0 auto;
 		display: block;
 	}
+}
+
+section.drug-graphic {
+	height: 170px;
+	display: block;
+	margin-top: 60px;
+	img {
+		width: 100%;
+	}
+}
+
+section.content {
+	padding: 15px;
+	padding-top: 30px;
+	font-size: 20px;
+	line-height: 25px;
+	text-align: justify;
 }
 
 // Scoop
@@ -193,7 +216,11 @@ section {
 		background-color: white;
 	}
 
-	@height: 85px;
+	&#starters {
+		margin-top: 15px;
+	}
+
+	@height: 75px;
 
 	@icon-height: 60px;
 	div.icon {
@@ -250,9 +277,14 @@ section {
   font-size: 40px;
   line-height: 1em;
   vertical-align: middle;
+  margin-right: 3px;
 
   &:after {
     content: "\f10d";
+  }
+
+  &.right-logo {
+  	margin-left: 3px;
   }
 }
 
