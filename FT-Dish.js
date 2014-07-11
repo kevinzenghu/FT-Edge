@@ -46,5 +46,9 @@ if (Meteor.isClient) {
 
     Meteor.startup(function() {
         FastClick.attach(document.body);
+        $("#splash").addClass('animate');
+        setTimeout(function() {
+            $("#splash").remove();
+        }, 1000);
     });
 }
