@@ -19,26 +19,51 @@
 	</div>
 </template>
 
-<template name="right_pane">
+<template name="right_pane">	
 	<div id="right-pane">
+		{{#if starters}}
+		<header>
+			<div class="back">
+				<i class="fa fa-mail-reply"></i>
+			</div>
+			<span class="ft-font">FT</span> Starters
+		</header>
+		<section>
+			<img id="scoop-image" src="/scoop.png" />
+		</section>
+		{{/if}}
+
+		{{#if substance}}
 		<header>
 			<div class="back">
 				<i class="fa fa-mail-reply"></i>
 			</div>
 			<span class="ft-font">FT</span> Substance
 		</header>
-		<section class="title">
+		<section class="title" id="bitcoin-test">
 			<span>
 				Everything you need to know about
 			</span>
 			<div>
 				Bitcoin
 			</div>
-
 		</section>
 		<section class="bitcoin-graphic">
 			<img src="/bitcoin_graphic.png" />
 		</section>
+		{{/if}}
+
+		{{#if scoop}}
+		<header>
+			<div class="back">
+				<i class="fa fa-mail-reply"></i>
+			</div>
+			<span class="ft-font">FT</span> Scoop
+		</header>
+		<section>
+			<img id="scoop-image" src="/scoop.png" />
+		</section>
+		{{/if}}
 	</div>
 </template>
 
@@ -54,30 +79,30 @@
 </template>
 
 <template name="sections">
-	<section class="test">
+	<section id="starters">
 		<div class="icon">
-			<img id="appetizers" src="/appetizers.png">
+			<img class="appetizers" src="/appetizers.png">
 		</div>
 		Starters
 	</section>
 
-	<section>
+	<section id="substance">
 		<div class="icon">
-			<img id="main-dish" src="/main_dish.png">
+			<img class="main-dish" src="/main_dish.png">
 		</div>
 		Substance
 	</section>
 
-	<section>
+	<section id="a-drink-with">
 		<div class="icon">
-			<img id="a-drink-with" src="/a_drink_with.png">
+			<img class="a-drink-with" src="/a_drink_with.png">
 		</div>
 		A drink with <span class="ft-font">FT</span>
 	</section>
 
-	<section>
+	<section id="the-scoop">
 		<div class="icon">
-			<img id="the-scoop" src="/the_scoop.png">
+			<img class="the-scoop" src="/the_scoop.png">
 		</div>
 		The scoop
 	</section>
