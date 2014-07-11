@@ -1,6 +1,10 @@
 if (Meteor.isClient) {
     Template.sections.events({
-        'click section': function(e) {
+        'touchend section': function(e) {
+            console.log('Left pane');
+            $("div#left-pane, div#right-pane").removeClass('active');
+        },
+        'mousedown section, touchstart section': function(e) {
             $(e.currentTarget).addClass('active');
         },
         'click section': function(e) {
@@ -8,11 +12,9 @@ if (Meteor.isClient) {
             $(e.currentTarget).removeClass('active');
             $("div#left-pane, div#right-pane").addClass('active');
         },
-        'click div#back': function(e) {
-            console.log ('Left pane')
-            $("div#left-pane, div#right-pane").removeClass('active');
-        }
+
     });
+
     Meteor.startup(function() {
         FastClick.attach(document.body);
     });

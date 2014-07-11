@@ -21,7 +21,7 @@
 }
 
 .position-transition {
-	.transition(left, 0.2s, ease-in);
+	.transition(left, 0.2s, ease-out);
 }
 
 .transition(@property, @duration, @timing-function) {
@@ -58,9 +58,29 @@ div#left-pane {
 	}
 }
 
+// Substance
+
+section.title {
+	height: 200px;
+	text-align: center;
+}
+
+section.bitcoin-graphic {
+	background-color: @sky-blue;
+	height: 300px;
+
+	img {
+		padding-top: 30px;
+		width: 250px;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
 div#right-pane {
-	div#back {
+	div.back {
 		float: left;
+		height: 60px;
 		width: 40px;
 	}
 	i.fa-mail-reply {
@@ -69,7 +89,7 @@ div#right-pane {
 	}
 	.position-transition;
 	position: absolute;
-	height: 100%:
+	height: 100%;
 	width: 100%;
 	left: 100%;
 
