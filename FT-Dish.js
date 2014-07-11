@@ -55,6 +55,6 @@ if (Meteor.isClient) {
         }, 1600);
         setTimeout(function() {
             $("#splash").fadeOut();
-        }, 2800);
+        }, 200);  // 2800
     });
 }

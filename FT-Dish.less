@@ -18,12 +18,23 @@
 
 @font-face {
     font-family: 'Alegreya Sans'; 
-    font-weight: light;
+    src: 
+    url("/AlegreyaSans-Black-webfont.ttf"),
+    url("/AlegreyaSans-Black-webfont.eot"),
+    url("/AlegreyaSans-Black-webfont.woff"),
+    url("/AlegreyaSans-Black-webfont.svg");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans'; 
     src: 
     url("/AlegreyaSans-Thin-webfont.ttf"),
     url("/AlegreyaSans-Thin-webfont.eot"),
     url("/AlegreyaSans-Thin-webfont.woff"),
     url("/AlegreyaSans-Thin-webfont.svg");
+
+    font-weight: light;
 }
 
 .position-transition {
@@ -44,18 +55,18 @@
 html, body {
 	height: 100%;
 	min-height: 100%;
+	max-width: 100%;
 	background-color: @salmon;
 	margin: 0px;
 	font-family: 'Alegreya Sans';
 	font-weight: light;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
 
 	color: @almost-black;
 }
@@ -75,6 +86,8 @@ div#left-pane {
 // Starter
 section.starter-blurb {
 	font-size: 18px;
+	line-height: 18px;
+	padding: 5px;
 	span.title {
 		font-weight: normal;
 	}
@@ -82,17 +95,23 @@ section.starter-blurb {
 
 // Substance
 section.title {
-	height: 200px;
+	font-size: 20px;
+	height: 120px;
 	text-align: center;
+
+	div.subject {
+		font-size: 30px;
+		margin-top: -50px;
+	}
 }
 
 section.bitcoin-graphic {
 	background-color: @sky-blue;
-	height: 300px;
+	height: 170px;
 
 	img {
 		padding-top: 30px;
-		width: 250px;
+		width: 120px;
 		margin: 0 auto;
 		display: block;
 	}
@@ -146,7 +165,7 @@ footer {
 	padding-left: 20px;
 	background-color: @sky-blue;
 
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 
